@@ -8,6 +8,7 @@ Group:		Applications/Mail
 Vendor:		Xavier Leroy <Xavier.Leroy@inria.fr>
 URL:		http://pauillac.inria.fr/~xleroy/software.html
 Source0:	http://pauillac.inria.fr/~xleroy/software/%{name}-%{version}.tar.gz
+# Source0-md5:	4cbc3a28d79d2759940e45c708e662dd
 Patch0:		%{name}-latin2.patch
 BuildRequires:	ocaml
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
