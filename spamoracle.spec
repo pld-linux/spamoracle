@@ -1,13 +1,13 @@
 Summary:	Spam classification tool
 Summary(pl):	Narzêdzie do rozpoznawania spamu
 Name:		spamoracle
-Version:	1.3.1
+Version:	1.4
 Release:	1
 License:	GPL v2
 Group:		Applications/Mail
 Vendor:		Xavier Leroy <Xavier.Leroy@inria.fr>
 Source0:	http://pauillac.inria.fr/~xleroy/software/%{name}-%{version}.tar.gz
-# Source0-md5:	c5cb0adfc9b5e40f098e052eb3e24adf
+# Source0-md5:	9cd2a825202c86a3728658545b0ac060
 URL:		http://pauillac.inria.fr/~xleroy/software.html
 Patch0:		%{name}-latin2.patch
 BuildRequires:	ocaml
