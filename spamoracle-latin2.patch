@@ -1,0 +1,75 @@
+diff -ur spamoracle-1.1/mail.ml spamoracle-1.1-/mail.ml
+--- spamoracle-1.1/mail.ml	Mon Aug 26 11:35:24 2002
++++ spamoracle-1.1-/mail.ml	Thu Sep 12 19:28:48 2002
+@@ -97,6 +97,30 @@
+   else
+     s
+ 
++let latin2_tbl = "\
++\000\001\002\003\004\005\006\007\008\009\010\011\012\013\014\015\
++\016\017\018\019\020\021\022\023\024\025\026\027\028\029\030\031\
++\032!\"#$%&'()*+,-./\
++0123456789:;<=>?\
++@ABCDEFGHIJKLMNO\
++PQRSTUVWXYZ[\\]^_\
++`abcdefghijklmno\
++pqrstuvwxyz{|}~\127\
++\128\129\130\131\132\133\134\135\136\137\138\139\140\141\142\143\
++\144\145\146\147\148\149\150\151\152\153\154\155\156\157\158\159\
++\160A~L¤LS§\"SSTZ­ZZ\
++oa,l'ls^,sstz\"zz\
++RAAAALCCCEEEEIID\
++DNNOOOOxRUUUUYTß\
++raaaalccceeeeiid\
++dnnoooo:ruuuuyt."
++
++(* Given string in iso-8859-2 encoding return its ASCII approximation.  *)
++let kill_latin2 s =
++  for i = 0 to String.length s - 1 do
++    s.[i] <- latin2_tbl.[Char.code s.[i]]
++  done
++
+ let re_encoded_header =
+   Str.regexp "=\\?[_A-Za-z0-9-]+\\?\\([BbQq]\\)\\?\\([^?]*\\)\\?="
+ 
+@@ -133,6 +157,8 @@
+ let re_multipart =
+   Str.regexp_case_fold
+     "multipart/.*boundary *= *\\(\"\\([^\"]+\\)\"\\|\\([^ \t]+\\)\\)"
++let re_content_latin2 =
++  Str.regexp_case_fold ".*charset=\"*iso-8859-2\"*.*"
+ 
+ let rec parse_message s =
+   try
+@@ -141,6 +167,12 @@
+     let body = String.sub s (pos_sep + 2) (String.length s - pos_sep - 2) in
+     let encoding = find_header "content-transfer-encoding:" headers in
+     let ctype = find_header "content-type:" headers in
++    let decode body =
++      let decoded = decode encoding body in
++      if Str.string_match re_content_latin2 ctype 0 then
++        (kill_latin2 decoded; decoded)
++      else
++        decoded in
+     if Str.string_match re_multipart ctype 0 then begin
+       let boundary =
+         try
+@@ -154,15 +186,15 @@
+       match Str.split_delim re_bound body with
+         [] ->
+           { headers = headers;
+-            body = decode encoding body;
++            body = decode body;
+             parts = [] }
+       | blurb :: parts ->
+           { headers = headers;
+-            body = decode encoding blurb;
++            body = decode blurb;
+             parts = List.map parse_message parts }
+     end else
+       { headers = headers;
+-        body = decode encoding body;
++        body = decode body;
+         parts = [] }
+   with Not_found ->
+     { headers = [];
