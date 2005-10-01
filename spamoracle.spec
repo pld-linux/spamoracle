@@ -24,10 +24,10 @@ spam", http://www.paulgraham.com/spam.html.
 
 
 %description -l pl
-SpamOracle jest narzêdziem pomagaj±cym wykryæ and odfiltrowaæ "spam"
+SpamOracle jest narzêdziem pomagaj±cym wykryæ i odfiltrowaæ "spam"
 (niechcian±, komercyjn± pocztê). Program dzia³a w oparciu o
-statystyczn± analizê s³ów wystêpuj±cych w e-mailu, porównuj±c czêsto¶æ
-ich wystêpowania z czêsto¶ci± w dostarczonych przez u¿ytkownika
+statystyczn± analizê s³ów wystêpuj±cych w e-mailu, porównuj±c czêstotliwo¶æ
+ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez u¿ytkownika
 zbiorach znanego spamu i dobrych maili. Algorytm klasyfikacji jest
 bazowany na wzorze Bayesa, jest on opisany w pracy Paula Grahama "A
 plan for spam", http://www.paulgraham.com/spam.html.
