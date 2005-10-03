@@ -4,8 +4,8 @@ Name:		spamoracle
 Version:	1.4
 Release:	1
 License:	GPL v2
-Group:		Applications/Mail
 Vendor:		Xavier Leroy <Xavier.Leroy@inria.fr>
+Group:		Applications/Mail
 Source0:	http://pauillac.inria.fr/~xleroy/software/%{name}-%{version}.tar.gz
 # Source0-md5:	9cd2a825202c86a3728658545b0ac060
 URL:		http://pauillac.inria.fr/~xleroy/software.html
@@ -20,17 +20,17 @@ of the words that appear in the e-mail, comparing the frequencies of
 words with those found in a user-provided corpus of known spam and
 known legitimate e-mail. The classification algorithm is based on
 Bayes' formula, and is described in Paul Graham's paper, "A plan for
-spam", http://www.paulgraham.com/spam.html.
+spam", http://www.paulgraham.com/spam.html .
 
 
 %description -l pl
 SpamOracle jest narzêdziem pomagaj±cym wykryæ i odfiltrowaæ "spam"
 (niechcian±, komercyjn± pocztê). Program dzia³a w oparciu o
-statystyczn± analizê s³ów wystêpuj±cych w e-mailu, porównuj±c czêstotliwo¶æ
-ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez u¿ytkownika
-zbiorach znanego spamu i dobrych maili. Algorytm klasyfikacji jest
-bazowany na wzorze Bayesa, jest on opisany w pracy Paula Grahama "A
-plan for spam", http://www.paulgraham.com/spam.html.
+statystyczn± analizê s³ów wystêpuj±cych w wiadomo¶ci, porównuj±c
+czêstotliwo¶æ ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez
+u¿ytkownika zbiorach znanego spamu i dobrych maili. Algorytm
+klasyfikacji jest bazowany na wzorze Bayesa, jest on opisany w pracy
+Paula Grahama "A plan for spam", http://www.paulgraham.com/spam.html .
 
 %prep
 %setup -q
