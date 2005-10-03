@@ -30,7 +30,8 @@ statystyczn± analizê s³ów wystêpuj±cych w wiadomo¶ci, porównuj±c
 czêstotliwo¶æ ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez
 u¿ytkownika zbiorach znanego spamu i dobrych maili. Algorytm
 klasyfikacji jest bazowany na wzorze Bayesa, jest on opisany w pracy
-Paula Grahama "A plan for spam", <http://www.paulgraham.com/spam.html>.
+Paula Grahama "A plan for spam",
+<http://www.paulgraham.com/spam.html>.
 
 %prep
 %setup -q
