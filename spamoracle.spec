@@ -20,7 +20,7 @@ of the words that appear in the e-mail, comparing the frequencies of
 words with those found in a user-provided corpus of known spam and
 known legitimate e-mail. The classification algorithm is based on
 Bayes' formula, and is described in Paul Graham's paper, "A plan for
-spam", http://www.paulgraham.com/spam.html .
+spam", <http://www.paulgraham.com/spam.html>.
 
 
 %description -l pl
@@ -30,7 +30,7 @@ statystyczn± analizê s³ów wystêpuj±cych w wiadomo¶ci, porównuj±c
 czêstotliwo¶æ ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez
 u¿ytkownika zbiorach znanego spamu i dobrych maili. Algorytm
 klasyfikacji jest bazowany na wzorze Bayesa, jest on opisany w pracy
-Paula Grahama "A plan for spam", http://www.paulgraham.com/spam.html .
+Paula Grahama "A plan for spam", <http://www.paulgraham.com/spam.html>.
 
 %prep
 %setup -q
