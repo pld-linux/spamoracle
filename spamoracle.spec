@@ -1,5 +1,5 @@
 Summary:	Spam classification tool
-Summary(pl):	Narzêdzie do rozpoznawania spamu
+Summary(pl.UTF-8):   NarzÄ™dzie do rozpoznawania spamu
 Name:		spamoracle
 Version:	1.4
 Release:	1
@@ -23,12 +23,12 @@ Bayes' formula, and is described in Paul Graham's paper, "A plan for
 spam", <http://www.paulgraham.com/spam.html>.
 
 
-%description -l pl
-SpamOracle jest narzêdziem pomagaj±cym wykryæ i odfiltrowaæ "spam"
-(niechcian±, komercyjn± pocztê). Program dzia³a w oparciu o
-statystyczn± analizê s³ów wystêpuj±cych w wiadomo¶ci, porównuj±c
-czêstotliwo¶æ ich wystêpowania z czêstotliwo¶ci± w dostarczonych przez
-u¿ytkownika zbiorach znanego spamu i dobrych maili. Algorytm
+%description -l pl.UTF-8
+SpamOracle jest narzÄ™dziem pomagajÄ…cym wykryÄ‡ i odfiltrowaÄ‡ "spam"
+(niechcianÄ…, komercyjnÄ… pocztÄ™). Program dziaÅ‚a w oparciu o
+statystycznÄ… analizÄ™ sÅ‚Ã³w wystÄ™pujÄ…cych w wiadomoÅ›ci, porÃ³wnujÄ…c
+czÄ™stotliwoÅ›Ä‡ ich wystÄ™powania z czÄ™stotliwoÅ›ciÄ… w dostarczonych przez
+uÅ¼ytkownika zbiorach znanego spamu i dobrych maili. Algorytm
 klasyfikacji jest bazowany na wzorze Bayesa, jest on opisany w pracy
 Paula Grahama "A plan for spam",
 <http://www.paulgraham.com/spam.html>.
