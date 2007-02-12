@@ -1,5 +1,5 @@
 Summary:	Spam classification tool
-Summary(pl.UTF-8):   Narzędzie do rozpoznawania spamu
+Summary(pl.UTF-8):	Narzędzie do rozpoznawania spamu
 Name:		spamoracle
 Version:	1.4
 Release:	1
