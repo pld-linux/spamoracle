@@ -35,7 +35,7 @@ Paula Grahama "A plan for spam",
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__make} LANGUAGES="-DFRENCH -DSPANISH -DITALIAN -DGERMAN"
